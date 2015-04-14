@@ -1,8 +1,6 @@
-#### This is a server providing restful api
-#### including listening http port and unix socket
-#### Remember, it is a prototype.
-
-#### Support?
+#### 1. This is a server providing restful api
+#### 2. Remember, it is a demo.
+#### 3. Support
 
 - [x] Listen http port
 - [x] Listen unix sock
