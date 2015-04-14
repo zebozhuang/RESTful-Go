@@ -5,4 +5,16 @@
 - [x] Listen http port
 - [x] Listen unix sock
 - [x] handle api
-- [ ] handle restful api
+- [x] handle restful api
+
+#### 4.usage
+
+```
+    go run server.go
+```
+```
+    curl http://127.0.0.1/hello
+```
+```
+    curl -XPOST http://127.0.0.1/hello
+```
