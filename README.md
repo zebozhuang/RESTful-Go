@@ -13,8 +13,8 @@
     go run server.go
 ```
 ```
-    curl http://127.0.0.1/hello
+    curl http://127.0.0.1/api/hello
 ```
 ```
-    curl -XPOST http://127.0.0.1/hello
+    curl -XPOST http://127.0.0.1/api/hello
 ```
