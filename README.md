@@ -1,5 +1,5 @@
-#### 1. This is a server providing restful api
-#### 2. Remember, it is a demo.
+#### 1. It is a server providing restful api
+#### 2. Tt is a demo.
 #### 3. Support
 
 - [x] Listen http port
