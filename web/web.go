@@ -30,7 +30,7 @@ func (w *Web) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
     w.mux.ServeHTTP(rw, r)
 }
 
-func (w *Web) Handle(urlpath string, hdlr func(http.ResponseWriter, *http.Request)) {
+func (w *Web) Handle(urlpath string, hdlr interface{}) {
     h := handler.NewWebHandler(hdlr) 
     w.mux.Handle(urlpath, h)
 }
