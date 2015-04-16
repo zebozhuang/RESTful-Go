@@ -1,30 +1,16 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
     "GoRestfulServer/web"
 )
-
-type Hello struct {
-}
-
-func NewHello() *Hello {
-    return new(Hello)
-}
-
-// restful api
-func (h *Hello) Get(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
-}
-
 
 func main() {
 
     var err error
 
     w := web.NewWeb()     
-    w.Handle("/api/hello", NewHello())
+
+    web.RegisterURL(w)
 
     err =  w.Listen("tcp", ":8000")
     if err != nil {
