@@ -1,31 +1,34 @@
 package api
 
 import (
-    "fmt"
-    "net/http"
+	"fmt"
+	"net/http"
 )
 
 type Hello struct {
 }
 
 func NewHello() *Hello {
-    return new(Hello)
+	return new(Hello)
 }
 
-// restful api 
+// restful api
 func (h *Hello) Get(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "You launch a Get request\n")
+	fmt.Fprintf(w, "You launch a Get request\n")
 }
 
 func (h *Hello) Post(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "You launch a Post request\n")
+	fmt.Fprintf(w, "You launch a Post request\n")
 }
 
 func (h *Hello) Put(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "You launch a Put request\n")
+	fmt.Fprintf(w, "You launch a Put request\n")
 }
 
 func (h *Hello) Delete(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "You lauch a Delete request\n")
+	fmt.Fprintf(w, "You launch a Delete request\n")
 }
 
+func NonRestfulApi(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "You launch a Non restful api.\n")
+}
