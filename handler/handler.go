@@ -96,7 +96,7 @@ func NewDummyHandler() *DummyHandler {
 	return h
 }
 
-func (h *DummyHandler) SetFunc(method string, handler interface{}) {
+func (h *DummyHandler) SetFunc(method string, handler func(http.ResponseWriter, *http.Request)) {
 	switch strings.ToUpper(method) {
 	case GET:
 		h.getter = handler
