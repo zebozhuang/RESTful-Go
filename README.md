@@ -4,8 +4,8 @@
 
 - [x] Listen http port
 - [x] Listen unix sock
-- [x] handle api
 - [x] handle restful api
+- [x] handle non-restful api
 
 #### 4.usage
 
@@ -22,7 +22,9 @@
 #### 5.Todo
 ```
 1.wrap request and reponse as context
-2.support non-restful api
+2.support middleware
+3.support render web page 
+4...
 ...
 ```
 
