@@ -5,6 +5,6 @@ import (
 )
 
 func RegisterURL(w *Web) {
-	w.Handle("/api/hello", api.NewHello())
+	w.Handle("/api/foo", api.NewFoo())
 	w.HandleFunc("GET", "/others", api.NonRestfulApi)
 }

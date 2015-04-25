@@ -5,27 +5,27 @@ import (
 	"net/http"
 )
 
-type Hello struct {
+type Foo struct {
 }
 
-func NewHello() *Hello {
-	return new(Hello)
+func NewFoo() *Foo {
+	return new(Foo)
 }
 
 // restful api
-func (h *Hello) Get(w http.ResponseWriter, r *http.Request) {
+func (h *Foo) Get(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "You launch a Get request\n")
 }
 
-func (h *Hello) Post(w http.ResponseWriter, r *http.Request) {
+func (h *Foo) Post(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "You launch a Post request\n")
 }
 
-func (h *Hello) Put(w http.ResponseWriter, r *http.Request) {
+func (h *Foo) Put(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "You launch a Put request\n")
 }
 
-func (h *Hello) Delete(w http.ResponseWriter, r *http.Request) {
+func (h *Foo) Delete(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "You launch a Delete request\n")
 }
 
