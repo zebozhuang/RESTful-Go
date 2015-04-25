@@ -1,4 +1,4 @@
-#### 1. It is a server providing restful api
+#### 1. It is a server providing restful api and non-restful api
 #### 2. It is a demo.
 #### 3. Support
 
