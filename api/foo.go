@@ -32,3 +32,4 @@ func (h *Foo) Delete(w http.ResponseWriter, r *http.Request) {
 func NonRestfulApi(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "You launch a Non restful api.\n")
 }
+
