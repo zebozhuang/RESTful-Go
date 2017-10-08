@@ -1,7 +1,7 @@
 package web
 
 import (
-	"GoRestfulServer/handler"
+	"RESTful-Go/handler"
 	"fmt"
 	"github.com/gorilla/mux"
 	"net"

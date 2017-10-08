@@ -2,7 +2,7 @@ package web
 
 import (
     "net/http"
-	"GoRestfulServer/api"
+	"RESTful-Go/api"
 )
 
 func RegisterURL(w *Web) {

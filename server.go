@@ -1,7 +1,7 @@
 package main
 
 import (
-    "GoRestfulServer/web"
+    "RESTful-Go/web"
 )
 
 func main() {
