@@ -136,3 +136,19 @@ func (h *DummyHandler) Header(w http.ResponseWriter, r *http.Request) {
 func (h *DummyHandler) methodNotAllowed(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "method not allowed")
 }
+
+type StaticHandler struct {
+	handler http.Handler
+}
+
+func NewStaticHandler(dir, prefix string) *StaticHandler {
+	h := new(StaticHandler)
+	h.handler = http.StripPrefix(prefix, http.FileServer(http.Dir(dir)))
+
+	return h
+}
+
+func (h *StaticHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	println("----->>>>")
+	h.handler.ServeHTTP(w, r)
+}

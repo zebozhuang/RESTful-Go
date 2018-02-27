@@ -42,6 +42,11 @@ func (w *Web) HandleFunc(method, urlpath string, hdlr func(http.ResponseWriter, 
 	w.Handle(urlpath, h)
 }
 
+// Support static file
+func (w *Web) PathPrefix(prefix string) *mux.Route {
+	return w.mux.PathPrefix(prefix)
+}
+
 func (w *Web) Listen(protocol, addr string) error {
 	if protocol == UNIX {
 		os.Remove(addr)
